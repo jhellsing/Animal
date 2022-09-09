@@ -8,13 +8,15 @@ namespace ssss
         {
             Veterinar veterinar = new Veterinar();
             Animal[] animal = new Animal[3];
-            animal[0] = new Dog(spasat: "спасает", food: "корм", location: "приют");
-            animal[1] = new Cat(linyat: "линяет", food: "пельмени", location: "коммунар");
-            animal[2] = new Horse(oret: "орет", food: "сено", location: "ставрово");
-            Console.WriteLine(animal[0]);
-            Console.WriteLine(animal[1]);
-            Console.WriteLine(animal[2]);
-            Console.WriteLine(veterinar.treatAnimal);
+            animal[0] = new Dog("спасает", "корм", "приют");
+            animal[1] = new Cat("линяет", "пельмени", "коммунар");
+            animal[2] = new Horse("орет", "сено", "ставрово");
+            
+            for (int i = 0; i < animal.Length; i++)
+            {
+                veterinar.treatAnimal(animal[i]);
+            }
+
 
         }  
     }

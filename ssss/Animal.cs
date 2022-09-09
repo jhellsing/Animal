@@ -10,8 +10,8 @@ namespace ssss
     internal class Animal
     {
             
-            string food;
-            string location;
+        public string food;
+        public string location;
         
 
             public Animal(string food, string location)
